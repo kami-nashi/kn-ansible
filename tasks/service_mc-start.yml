@@ -1,0 +1,6 @@
+---
+- name: Disable IPTables
+  command: /usr/bin/iptables -F
+
+- name: Start Muticraft Services
+  command: /home/minecraft/multicraft/bin/multicraft start
