@@ -1,6 +1,11 @@
 ---
-- name: Disable IPTables
-  command: /usr/bin/iptables -F
+- name: Disable CentOS IPTables
+  command: /usr/sbin/iptables -F
+  when: ansible_distribution == "CentOS"
+
+- name: Disable Debian IPTables 
+  command: /sbin/iptables -F
+  when: ansible_distribution == "Debian"
 
 - name: Start Muticraft Services
   command: /home/minecraft/multicraft/bin/multicraft start

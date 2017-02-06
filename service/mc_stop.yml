@@ -1,0 +1,9 @@
+---
+- hosts: all
+  user: root
+
+  tasks:
+    - include: ../tasks/service_mc-stop.yml
+      tags: [ mc_stop ]
+    - include: ../tasks/service_www-stop.yml
+      tags: [ www_stop ]
