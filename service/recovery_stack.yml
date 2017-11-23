@@ -2,7 +2,7 @@
 - hosts: all
   user: root
 
-  tasks
+  tasks:
     - import_tasks: ../tasks/nagios_downtime-all.yml
       tags: [nagios]
     - import_tasks: ../tasks/service_www-restart.yml
