@@ -2,8 +2,10 @@
 - hosts: all
   user: root
 
-  tasks:
-    - import_tasks: ../tasks/service_httpd-restart.yml
-      tags: [ httpd_restart ]
-    - import_tasks: ../tasks/service_www-stop.yml
-      tags: [ mariadb_restart ]
+  tasks
+    - import_tasks: ../tasks/nagios_downtime-all.yml
+      tags: [nagios]
+    - import_tasks: ../tasks/service_www-restart.yml
+      tags: [ retsart_httpd ]
+    - import_tasks: ../tasks/service_mariadb-restart.yml
+      tags: [ restart_mariadb ]

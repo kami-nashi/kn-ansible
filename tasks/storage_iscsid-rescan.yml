@@ -1,0 +1,3 @@
+---
+- name: Start iSCSId Service
+  command: iscsiadm -m session rescan

@@ -1,5 +1,4 @@
 ---
-- name: Enable CentOS MariaDB Service
+- name: Restart CentOS MariaDB Service
   service: name=mariadb state=restarted
   when: ansible_distribution == "CentOS"
-

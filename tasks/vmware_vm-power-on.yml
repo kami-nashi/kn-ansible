@@ -1,0 +1,3 @@
+---
+- name: Power On Vmware VM
+  state: poweredon
