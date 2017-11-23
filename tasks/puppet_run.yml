@@ -1,0 +1,3 @@
+---
+- puppet:
+    timeout: 5m

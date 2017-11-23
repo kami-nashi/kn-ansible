@@ -1,0 +1,5 @@
+---
+- hosts: all
+  user: root
+  tasks:
+    - import_tasks: ../tasks/git_clone_ispc3.yml

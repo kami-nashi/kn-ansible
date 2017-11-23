@@ -1,0 +1,9 @@
+---
+- hosts: all
+  user: root
+
+  tasks:
+    - import_tasks: ../tasks/service_httpd-restart.yml
+      tags: [ httpd_restart ]
+    - import_tasks: ../tasks/service_www-stop.yml
+      tags: [ mariadb_restart ]

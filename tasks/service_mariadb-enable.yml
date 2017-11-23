@@ -1,0 +1,5 @@
+---
+- name: Enable CentOS MariaDB Service
+  service: name=mariadb enabled=yes
+  when: ansible_distribution == "CentOS"
+

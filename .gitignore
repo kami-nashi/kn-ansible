@@ -1,0 +1,5 @@
+vault/prod_*
+tasks/*.retry
+update/*.retry
+install/*.retry
+inventory/au/*

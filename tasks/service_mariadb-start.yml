@@ -1,0 +1,5 @@
+---
+- name: Start CentOS MariaDB Service
+  service: name=mariadb state=started
+  when: ansible_distribution == "CentOS"
+

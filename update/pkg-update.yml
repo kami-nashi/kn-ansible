@@ -2,6 +2,10 @@
 - hosts: all
   user: root
   tasks:
+
+  - name: Set Downtime
+    import_tasks: ../tasks/nagios_downtime-all.yml
+
   - name: Update APT Cache
     apt: update_cache=yes
     when: ansible_distribution == "Debian"

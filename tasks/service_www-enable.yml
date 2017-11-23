@@ -1,0 +1,5 @@
+---
+- name: Enable CentOS Webserver
+  service: name=httpd enabled=yes
+  when: ansible_distribution == "CentOS"
+

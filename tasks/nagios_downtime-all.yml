@@ -1,0 +1,9 @@
+---
+- name: Set Nagios Downtime
+  nagios:
+    action: downtime
+    minutes: 30
+    service: all
+    host: '{{ inventory_hostname }}'
+    comment: ' STD Ansible Downtime @ 30 Minutes '
+  delegate_to: "192.168.100.76"

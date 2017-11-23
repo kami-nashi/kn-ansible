@@ -1,0 +1,5 @@
+---
+- git:
+    repo: 'https://git.ispconfig.org/ispconfig/ispconfig3.git'
+    dest: /opt/git/ispc3
+    update: yes

@@ -1,0 +1,5 @@
+---
+- name: Enable CentOS HTTP Service
+  service: name=httpd state=restarted
+  when: ansible_distribution == "CentOS"
+
