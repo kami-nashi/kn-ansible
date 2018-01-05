@@ -1,0 +1,9 @@
+---
+- name: HAPROXY LB - OR
+  haproxy:
+    state: disabled
+    host: '{{ inventory_hostname}}'
+    backend: ispc3-www-t2
+    socket: /var/run/haproxy.sock
+    comment: ' Pull Node Out Of Rotation '
+  delegate_to: "10.68.100.120"
